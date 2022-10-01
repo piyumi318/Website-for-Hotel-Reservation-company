@@ -1,0 +1,1972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AutoID">
+        <s:complexType />
+      </s:element>
+      <s:element name="AutoIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insert">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="No" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoCustomerID">
+        <s:complexType />
+      </s:element>
+      <s:element name="AutoCustomerIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoCustomerIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCustomerData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="gender" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCustomerDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddCustomerDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getHotelData">
+        <s:complexType />
+      </s:element>
+      <s:element name="getHotelDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getHotelDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoRoomID">
+        <s:complexType />
+      </s:element>
+      <s:element name="AutoRoomIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoRoomIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertRoom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Size" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hotelId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertRoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="insertRoomResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelLoginData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelLoginDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HotelLoginDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="customerLoginData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="customerLoginDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerLoginDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoAdminID">
+        <s:complexType />
+      </s:element>
+      <s:element name="AutoAdminIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoAdminIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAdmin">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAdminResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAdminResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdminLoginData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdminLoginDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdminLoginDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilterData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilterDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilterDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilterRoomType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilterRoomTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilterRoomTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RoomDetails">
+        <s:complexType />
+      </s:element>
+      <s:element name="RoomDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RoomDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CountryOfHotels">
+        <s:complexType />
+      </s:element>
+      <s:element name="CountryOfHotelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CountryOfHotelsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CityOfHotels">
+        <s:complexType />
+      </s:element>
+      <s:element name="CityOfHotelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CityOfHotelsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelsToCity">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelsToCityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HotelsToCityResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelsToCountry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelsToCountryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HotelsToCountryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelsDetailsAccordingToName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelsDetailsAccordingToNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HotelsDetailsAccordingToNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BookingDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkout" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hotelId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="roomId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="quantity" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="total" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BookingDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BookingDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Roomcount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RoomcountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RoomcountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BookedRoomcount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Checkin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="checkout" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BookedRoomcountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BookedRoomcountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutoBookingID">
+        <s:complexType />
+      </s:element>
+      <s:element name="AutoBookingIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutoBookingIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MyHotelsDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hotelId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MyHotelsDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MyHotelsDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MyhotelBooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="hotelId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MyhotelBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MyhotelBookingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MyBooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MyBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MyBookingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Room">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RoomId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RoomResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelBooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bookingID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CancelBookingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllBooking">
+        <s:complexType />
+      </s:element>
+      <s:element name="AllBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllBookingResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomertoID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomertoIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomertoIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdminUsername">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AdminUsernameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AdminUsernameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelUsername">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="HotelUsernameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HotelUsernameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerUsername">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CustomerUsernameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerUsernameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Encrypt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="clearText" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncryptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EncryptResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RoomDetailsbyHotelID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HotelID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RoomDetailsbyHotelIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RoomDetailsbyHotelIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteHotel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HotelID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteHotelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteHotelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRoomByHotelId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HotelID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRoomByHotelIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRoomByHotelIdResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilterDataHotel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hotelid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilterDataHotelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilterDataHotelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilterRoomTypeHotel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="hotelid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FilterRoomTypeHotelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FilterRoomTypeHotelResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRoom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RoomID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteRoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteRoomResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRoom">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RoomID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantity" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="price" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateRoomResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateRoomResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="customerDetailsbyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="customerDetailsbyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="customerDetailsbyIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AutoIDSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoID" />
+  </wsdl:message>
+  <wsdl:message name="AutoIDSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertSoapIn">
+    <wsdl:part name="parameters" element="tns:insert" />
+  </wsdl:message>
+  <wsdl:message name="insertSoapOut">
+    <wsdl:part name="parameters" element="tns:insertResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoCustomerIDSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="AutoCustomerIDSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoCustomerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerDataSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCustomerData" />
+  </wsdl:message>
+  <wsdl:message name="AddCustomerDataSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCustomerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getHotelDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getHotelData" />
+  </wsdl:message>
+  <wsdl:message name="getHotelDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getHotelDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoRoomIDSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoRoomID" />
+  </wsdl:message>
+  <wsdl:message name="AutoRoomIDSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoRoomIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertRoomSoapIn">
+    <wsdl:part name="parameters" element="tns:insertRoom" />
+  </wsdl:message>
+  <wsdl:message name="insertRoomSoapOut">
+    <wsdl:part name="parameters" element="tns:insertRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="HotelLoginDataSoapIn">
+    <wsdl:part name="parameters" element="tns:HotelLoginData" />
+  </wsdl:message>
+  <wsdl:message name="HotelLoginDataSoapOut">
+    <wsdl:part name="parameters" element="tns:HotelLoginDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="customerLoginDataSoapIn">
+    <wsdl:part name="parameters" element="tns:customerLoginData" />
+  </wsdl:message>
+  <wsdl:message name="customerLoginDataSoapOut">
+    <wsdl:part name="parameters" element="tns:customerLoginDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoAdminIDSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoAdminID" />
+  </wsdl:message>
+  <wsdl:message name="AutoAdminIDSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoAdminIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAdminSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAdmin" />
+  </wsdl:message>
+  <wsdl:message name="AddAdminSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminLoginDataSoapIn">
+    <wsdl:part name="parameters" element="tns:AdminLoginData" />
+  </wsdl:message>
+  <wsdl:message name="AdminLoginDataSoapOut">
+    <wsdl:part name="parameters" element="tns:AdminLoginDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="FilterDataSoapIn">
+    <wsdl:part name="parameters" element="tns:FilterData" />
+  </wsdl:message>
+  <wsdl:message name="FilterDataSoapOut">
+    <wsdl:part name="parameters" element="tns:FilterDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="FilterRoomTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:FilterRoomType" />
+  </wsdl:message>
+  <wsdl:message name="FilterRoomTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:FilterRoomTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="RoomDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:RoomDetails" />
+  </wsdl:message>
+  <wsdl:message name="RoomDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:RoomDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CountryOfHotelsSoapIn">
+    <wsdl:part name="parameters" element="tns:CountryOfHotels" />
+  </wsdl:message>
+  <wsdl:message name="CountryOfHotelsSoapOut">
+    <wsdl:part name="parameters" element="tns:CountryOfHotelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="CityOfHotelsSoapIn">
+    <wsdl:part name="parameters" element="tns:CityOfHotels" />
+  </wsdl:message>
+  <wsdl:message name="CityOfHotelsSoapOut">
+    <wsdl:part name="parameters" element="tns:CityOfHotelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="HotelsToCitySoapIn">
+    <wsdl:part name="parameters" element="tns:HotelsToCity" />
+  </wsdl:message>
+  <wsdl:message name="HotelsToCitySoapOut">
+    <wsdl:part name="parameters" element="tns:HotelsToCityResponse" />
+  </wsdl:message>
+  <wsdl:message name="HotelsToCountrySoapIn">
+    <wsdl:part name="parameters" element="tns:HotelsToCountry" />
+  </wsdl:message>
+  <wsdl:message name="HotelsToCountrySoapOut">
+    <wsdl:part name="parameters" element="tns:HotelsToCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="HotelsDetailsAccordingToNameSoapIn">
+    <wsdl:part name="parameters" element="tns:HotelsDetailsAccordingToName" />
+  </wsdl:message>
+  <wsdl:message name="HotelsDetailsAccordingToNameSoapOut">
+    <wsdl:part name="parameters" element="tns:HotelsDetailsAccordingToNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="BookingDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:BookingDetails" />
+  </wsdl:message>
+  <wsdl:message name="BookingDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:BookingDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="RoomcountSoapIn">
+    <wsdl:part name="parameters" element="tns:Roomcount" />
+  </wsdl:message>
+  <wsdl:message name="RoomcountSoapOut">
+    <wsdl:part name="parameters" element="tns:RoomcountResponse" />
+  </wsdl:message>
+  <wsdl:message name="BookedRoomcountSoapIn">
+    <wsdl:part name="parameters" element="tns:BookedRoomcount" />
+  </wsdl:message>
+  <wsdl:message name="BookedRoomcountSoapOut">
+    <wsdl:part name="parameters" element="tns:BookedRoomcountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AutoBookingIDSoapIn">
+    <wsdl:part name="parameters" element="tns:AutoBookingID" />
+  </wsdl:message>
+  <wsdl:message name="AutoBookingIDSoapOut">
+    <wsdl:part name="parameters" element="tns:AutoBookingIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="MyHotelsDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:MyHotelsDetails" />
+  </wsdl:message>
+  <wsdl:message name="MyHotelsDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:MyHotelsDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="MyhotelBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:MyhotelBooking" />
+  </wsdl:message>
+  <wsdl:message name="MyhotelBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:MyhotelBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="MyBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:MyBooking" />
+  </wsdl:message>
+  <wsdl:message name="MyBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:MyBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="RoomSoapIn">
+    <wsdl:part name="parameters" element="tns:Room" />
+  </wsdl:message>
+  <wsdl:message name="RoomSoapOut">
+    <wsdl:part name="parameters" element="tns:RoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:CancelBooking" />
+  </wsdl:message>
+  <wsdl:message name="CancelBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:CancelBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:AllBooking" />
+  </wsdl:message>
+  <wsdl:message name="AllBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:AllBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomertoIDSoapIn">
+    <wsdl:part name="parameters" element="tns:CustomertoID" />
+  </wsdl:message>
+  <wsdl:message name="CustomertoIDSoapOut">
+    <wsdl:part name="parameters" element="tns:CustomertoIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="AdminUsernameSoapIn">
+    <wsdl:part name="parameters" element="tns:AdminUsername" />
+  </wsdl:message>
+  <wsdl:message name="AdminUsernameSoapOut">
+    <wsdl:part name="parameters" element="tns:AdminUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="HotelUsernameSoapIn">
+    <wsdl:part name="parameters" element="tns:HotelUsername" />
+  </wsdl:message>
+  <wsdl:message name="HotelUsernameSoapOut">
+    <wsdl:part name="parameters" element="tns:HotelUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="CustomerUsernameSoapIn">
+    <wsdl:part name="parameters" element="tns:CustomerUsername" />
+  </wsdl:message>
+  <wsdl:message name="CustomerUsernameSoapOut">
+    <wsdl:part name="parameters" element="tns:CustomerUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapIn">
+    <wsdl:part name="parameters" element="tns:Encrypt" />
+  </wsdl:message>
+  <wsdl:message name="EncryptSoapOut">
+    <wsdl:part name="parameters" element="tns:EncryptResponse" />
+  </wsdl:message>
+  <wsdl:message name="RoomDetailsbyHotelIDSoapIn">
+    <wsdl:part name="parameters" element="tns:RoomDetailsbyHotelID" />
+  </wsdl:message>
+  <wsdl:message name="RoomDetailsbyHotelIDSoapOut">
+    <wsdl:part name="parameters" element="tns:RoomDetailsbyHotelIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteHotelSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteHotel" />
+  </wsdl:message>
+  <wsdl:message name="DeleteHotelSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRoomByHotelIdSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRoomByHotelId" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRoomByHotelIdSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRoomByHotelIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="FilterDataHotelSoapIn">
+    <wsdl:part name="parameters" element="tns:FilterDataHotel" />
+  </wsdl:message>
+  <wsdl:message name="FilterDataHotelSoapOut">
+    <wsdl:part name="parameters" element="tns:FilterDataHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="FilterRoomTypeHotelSoapIn">
+    <wsdl:part name="parameters" element="tns:FilterRoomTypeHotel" />
+  </wsdl:message>
+  <wsdl:message name="FilterRoomTypeHotelSoapOut">
+    <wsdl:part name="parameters" element="tns:FilterRoomTypeHotelResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRoomSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteRoom" />
+  </wsdl:message>
+  <wsdl:message name="DeleteRoomSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRoomSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateRoom" />
+  </wsdl:message>
+  <wsdl:message name="UpdateRoomSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateRoomResponse" />
+  </wsdl:message>
+  <wsdl:message name="customerDetailsbyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:customerDetailsbyID" />
+  </wsdl:message>
+  <wsdl:message name="customerDetailsbyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:customerDetailsbyIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HotelsWebServiceSoap">
+    <wsdl:operation name="AutoID">
+      <wsdl:input message="tns:AutoIDSoapIn" />
+      <wsdl:output message="tns:AutoIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insert">
+      <wsdl:input message="tns:insertSoapIn" />
+      <wsdl:output message="tns:insertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoCustomerID">
+      <wsdl:input message="tns:AutoCustomerIDSoapIn" />
+      <wsdl:output message="tns:AutoCustomerIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerData">
+      <wsdl:input message="tns:AddCustomerDataSoapIn" />
+      <wsdl:output message="tns:AddCustomerDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getHotelData">
+      <wsdl:input message="tns:getHotelDataSoapIn" />
+      <wsdl:output message="tns:getHotelDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoRoomID">
+      <wsdl:input message="tns:AutoRoomIDSoapIn" />
+      <wsdl:output message="tns:AutoRoomIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertRoom">
+      <wsdl:input message="tns:insertRoomSoapIn" />
+      <wsdl:output message="tns:insertRoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HotelLoginData">
+      <wsdl:input message="tns:HotelLoginDataSoapIn" />
+      <wsdl:output message="tns:HotelLoginDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="customerLoginData">
+      <wsdl:input message="tns:customerLoginDataSoapIn" />
+      <wsdl:output message="tns:customerLoginDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoAdminID">
+      <wsdl:input message="tns:AutoAdminIDSoapIn" />
+      <wsdl:output message="tns:AutoAdminIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAdmin">
+      <wsdl:input message="tns:AddAdminSoapIn" />
+      <wsdl:output message="tns:AddAdminSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminLoginData">
+      <wsdl:input message="tns:AdminLoginDataSoapIn" />
+      <wsdl:output message="tns:AdminLoginDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterData">
+      <wsdl:input message="tns:FilterDataSoapIn" />
+      <wsdl:output message="tns:FilterDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterRoomType">
+      <wsdl:input message="tns:FilterRoomTypeSoapIn" />
+      <wsdl:output message="tns:FilterRoomTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RoomDetails">
+      <wsdl:input message="tns:RoomDetailsSoapIn" />
+      <wsdl:output message="tns:RoomDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CountryOfHotels">
+      <wsdl:input message="tns:CountryOfHotelsSoapIn" />
+      <wsdl:output message="tns:CountryOfHotelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CityOfHotels">
+      <wsdl:input message="tns:CityOfHotelsSoapIn" />
+      <wsdl:output message="tns:CityOfHotelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HotelsToCity">
+      <wsdl:input message="tns:HotelsToCitySoapIn" />
+      <wsdl:output message="tns:HotelsToCitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HotelsToCountry">
+      <wsdl:input message="tns:HotelsToCountrySoapIn" />
+      <wsdl:output message="tns:HotelsToCountrySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HotelsDetailsAccordingToName">
+      <wsdl:input message="tns:HotelsDetailsAccordingToNameSoapIn" />
+      <wsdl:output message="tns:HotelsDetailsAccordingToNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BookingDetails">
+      <wsdl:input message="tns:BookingDetailsSoapIn" />
+      <wsdl:output message="tns:BookingDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Roomcount">
+      <wsdl:input message="tns:RoomcountSoapIn" />
+      <wsdl:output message="tns:RoomcountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BookedRoomcount">
+      <wsdl:input message="tns:BookedRoomcountSoapIn" />
+      <wsdl:output message="tns:BookedRoomcountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AutoBookingID">
+      <wsdl:input message="tns:AutoBookingIDSoapIn" />
+      <wsdl:output message="tns:AutoBookingIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MyHotelsDetails">
+      <wsdl:input message="tns:MyHotelsDetailsSoapIn" />
+      <wsdl:output message="tns:MyHotelsDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MyhotelBooking">
+      <wsdl:input message="tns:MyhotelBookingSoapIn" />
+      <wsdl:output message="tns:MyhotelBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MyBooking">
+      <wsdl:input message="tns:MyBookingSoapIn" />
+      <wsdl:output message="tns:MyBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Room">
+      <wsdl:input message="tns:RoomSoapIn" />
+      <wsdl:output message="tns:RoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelBooking">
+      <wsdl:input message="tns:CancelBookingSoapIn" />
+      <wsdl:output message="tns:CancelBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllBooking">
+      <wsdl:input message="tns:AllBookingSoapIn" />
+      <wsdl:output message="tns:AllBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomertoID">
+      <wsdl:input message="tns:CustomertoIDSoapIn" />
+      <wsdl:output message="tns:CustomertoIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AdminUsername">
+      <wsdl:input message="tns:AdminUsernameSoapIn" />
+      <wsdl:output message="tns:AdminUsernameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="HotelUsername">
+      <wsdl:input message="tns:HotelUsernameSoapIn" />
+      <wsdl:output message="tns:HotelUsernameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomerUsername">
+      <wsdl:input message="tns:CustomerUsernameSoapIn" />
+      <wsdl:output message="tns:CustomerUsernameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <wsdl:input message="tns:EncryptSoapIn" />
+      <wsdl:output message="tns:EncryptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RoomDetailsbyHotelID">
+      <wsdl:input message="tns:RoomDetailsbyHotelIDSoapIn" />
+      <wsdl:output message="tns:RoomDetailsbyHotelIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHotel">
+      <wsdl:input message="tns:DeleteHotelSoapIn" />
+      <wsdl:output message="tns:DeleteHotelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomByHotelId">
+      <wsdl:input message="tns:DeleteRoomByHotelIdSoapIn" />
+      <wsdl:output message="tns:DeleteRoomByHotelIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterDataHotel">
+      <wsdl:input message="tns:FilterDataHotelSoapIn" />
+      <wsdl:output message="tns:FilterDataHotelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FilterRoomTypeHotel">
+      <wsdl:input message="tns:FilterRoomTypeHotelSoapIn" />
+      <wsdl:output message="tns:FilterRoomTypeHotelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoom">
+      <wsdl:input message="tns:DeleteRoomSoapIn" />
+      <wsdl:output message="tns:DeleteRoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoom">
+      <wsdl:input message="tns:UpdateRoomSoapIn" />
+      <wsdl:output message="tns:UpdateRoomSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="customerDetailsbyID">
+      <wsdl:input message="tns:customerDetailsbyIDSoapIn" />
+      <wsdl:output message="tns:customerDetailsbyIDSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HotelsWebServiceSoap" type="tns:HotelsWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutoID">
+      <soap:operation soapAction="http://tempuri.org/AutoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert">
+      <soap:operation soapAction="http://tempuri.org/insert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCustomerID">
+      <soap:operation soapAction="http://tempuri.org/AutoCustomerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerData">
+      <soap:operation soapAction="http://tempuri.org/AddCustomerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHotelData">
+      <soap:operation soapAction="http://tempuri.org/getHotelData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoRoomID">
+      <soap:operation soapAction="http://tempuri.org/AutoRoomID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRoom">
+      <soap:operation soapAction="http://tempuri.org/insertRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelLoginData">
+      <soap:operation soapAction="http://tempuri.org/HotelLoginData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="customerLoginData">
+      <soap:operation soapAction="http://tempuri.org/customerLoginData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoAdminID">
+      <soap:operation soapAction="http://tempuri.org/AutoAdminID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdmin">
+      <soap:operation soapAction="http://tempuri.org/AddAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminLoginData">
+      <soap:operation soapAction="http://tempuri.org/AdminLoginData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterData">
+      <soap:operation soapAction="http://tempuri.org/FilterData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterRoomType">
+      <soap:operation soapAction="http://tempuri.org/FilterRoomType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoomDetails">
+      <soap:operation soapAction="http://tempuri.org/RoomDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountryOfHotels">
+      <soap:operation soapAction="http://tempuri.org/CountryOfHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CityOfHotels">
+      <soap:operation soapAction="http://tempuri.org/CityOfHotels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelsToCity">
+      <soap:operation soapAction="http://tempuri.org/HotelsToCity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelsToCountry">
+      <soap:operation soapAction="http://tempuri.org/HotelsToCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelsDetailsAccordingToName">
+      <soap:operation soapAction="http://tempuri.org/HotelsDetailsAccordingToName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookingDetails">
+      <soap:operation soapAction="http://tempuri.org/BookingDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Roomcount">
+      <soap:operation soapAction="http://tempuri.org/Roomcount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookedRoomcount">
+      <soap:operation soapAction="http://tempuri.org/BookedRoomcount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoBookingID">
+      <soap:operation soapAction="http://tempuri.org/AutoBookingID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyHotelsDetails">
+      <soap:operation soapAction="http://tempuri.org/MyHotelsDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyhotelBooking">
+      <soap:operation soapAction="http://tempuri.org/MyhotelBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyBooking">
+      <soap:operation soapAction="http://tempuri.org/MyBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Room">
+      <soap:operation soapAction="http://tempuri.org/Room" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBooking">
+      <soap:operation soapAction="http://tempuri.org/CancelBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllBooking">
+      <soap:operation soapAction="http://tempuri.org/AllBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomertoID">
+      <soap:operation soapAction="http://tempuri.org/CustomertoID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminUsername">
+      <soap:operation soapAction="http://tempuri.org/AdminUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelUsername">
+      <soap:operation soapAction="http://tempuri.org/HotelUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerUsername">
+      <soap:operation soapAction="http://tempuri.org/CustomerUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap:operation soapAction="http://tempuri.org/Encrypt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoomDetailsbyHotelID">
+      <soap:operation soapAction="http://tempuri.org/RoomDetailsbyHotelID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHotel">
+      <soap:operation soapAction="http://tempuri.org/DeleteHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomByHotelId">
+      <soap:operation soapAction="http://tempuri.org/DeleteRoomByHotelId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterDataHotel">
+      <soap:operation soapAction="http://tempuri.org/FilterDataHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterRoomTypeHotel">
+      <soap:operation soapAction="http://tempuri.org/FilterRoomTypeHotel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoom">
+      <soap:operation soapAction="http://tempuri.org/DeleteRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoom">
+      <soap:operation soapAction="http://tempuri.org/UpdateRoom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="customerDetailsbyID">
+      <soap:operation soapAction="http://tempuri.org/customerDetailsbyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HotelsWebServiceSoap12" type="tns:HotelsWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutoID">
+      <soap12:operation soapAction="http://tempuri.org/AutoID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insert">
+      <soap12:operation soapAction="http://tempuri.org/insert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoCustomerID">
+      <soap12:operation soapAction="http://tempuri.org/AutoCustomerID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomerData">
+      <soap12:operation soapAction="http://tempuri.org/AddCustomerData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHotelData">
+      <soap12:operation soapAction="http://tempuri.org/getHotelData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoRoomID">
+      <soap12:operation soapAction="http://tempuri.org/AutoRoomID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertRoom">
+      <soap12:operation soapAction="http://tempuri.org/insertRoom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelLoginData">
+      <soap12:operation soapAction="http://tempuri.org/HotelLoginData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="customerLoginData">
+      <soap12:operation soapAction="http://tempuri.org/customerLoginData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoAdminID">
+      <soap12:operation soapAction="http://tempuri.org/AutoAdminID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAdmin">
+      <soap12:operation soapAction="http://tempuri.org/AddAdmin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminLoginData">
+      <soap12:operation soapAction="http://tempuri.org/AdminLoginData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterData">
+      <soap12:operation soapAction="http://tempuri.org/FilterData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterRoomType">
+      <soap12:operation soapAction="http://tempuri.org/FilterRoomType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoomDetails">
+      <soap12:operation soapAction="http://tempuri.org/RoomDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CountryOfHotels">
+      <soap12:operation soapAction="http://tempuri.org/CountryOfHotels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CityOfHotels">
+      <soap12:operation soapAction="http://tempuri.org/CityOfHotels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelsToCity">
+      <soap12:operation soapAction="http://tempuri.org/HotelsToCity" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelsToCountry">
+      <soap12:operation soapAction="http://tempuri.org/HotelsToCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelsDetailsAccordingToName">
+      <soap12:operation soapAction="http://tempuri.org/HotelsDetailsAccordingToName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookingDetails">
+      <soap12:operation soapAction="http://tempuri.org/BookingDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Roomcount">
+      <soap12:operation soapAction="http://tempuri.org/Roomcount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BookedRoomcount">
+      <soap12:operation soapAction="http://tempuri.org/BookedRoomcount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AutoBookingID">
+      <soap12:operation soapAction="http://tempuri.org/AutoBookingID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyHotelsDetails">
+      <soap12:operation soapAction="http://tempuri.org/MyHotelsDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyhotelBooking">
+      <soap12:operation soapAction="http://tempuri.org/MyhotelBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MyBooking">
+      <soap12:operation soapAction="http://tempuri.org/MyBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Room">
+      <soap12:operation soapAction="http://tempuri.org/Room" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelBooking">
+      <soap12:operation soapAction="http://tempuri.org/CancelBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllBooking">
+      <soap12:operation soapAction="http://tempuri.org/AllBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomertoID">
+      <soap12:operation soapAction="http://tempuri.org/CustomertoID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AdminUsername">
+      <soap12:operation soapAction="http://tempuri.org/AdminUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HotelUsername">
+      <soap12:operation soapAction="http://tempuri.org/HotelUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomerUsername">
+      <soap12:operation soapAction="http://tempuri.org/CustomerUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Encrypt">
+      <soap12:operation soapAction="http://tempuri.org/Encrypt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RoomDetailsbyHotelID">
+      <soap12:operation soapAction="http://tempuri.org/RoomDetailsbyHotelID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteHotel">
+      <soap12:operation soapAction="http://tempuri.org/DeleteHotel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoomByHotelId">
+      <soap12:operation soapAction="http://tempuri.org/DeleteRoomByHotelId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterDataHotel">
+      <soap12:operation soapAction="http://tempuri.org/FilterDataHotel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FilterRoomTypeHotel">
+      <soap12:operation soapAction="http://tempuri.org/FilterRoomTypeHotel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoom">
+      <soap12:operation soapAction="http://tempuri.org/DeleteRoom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRoom">
+      <soap12:operation soapAction="http://tempuri.org/UpdateRoom" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="customerDetailsbyID">
+      <soap12:operation soapAction="http://tempuri.org/customerDetailsbyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HotelsWebService">
+    <wsdl:port name="HotelsWebServiceSoap" binding="tns:HotelsWebServiceSoap">
+      <soap:address location="https://localhost:44346/HotelsWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HotelsWebServiceSoap12" binding="tns:HotelsWebServiceSoap12">
+      <soap12:address location="https://localhost:44346/HotelsWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
